@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-header{
+    background-color: #3A4149;
+}
+.bg-all{
+    background-color: #2F353A;
+}
+.bg-transparent{
+    background-color: rgba(0, 0,0, .3);
+}
