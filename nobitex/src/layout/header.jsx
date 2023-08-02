@@ -12,11 +12,11 @@ const Header = () => {
     }
     return (
         <>
-            <div className="bg-header sticky top-0 left-0 border-b border-white flex flex-row-reverse items-center justify-between  px-6 w-full h-[10vh] bg-slate-400">
+            <div className="bg-header sticky top-0 left-0 border-b border-white flex items-center justify-between  px-6 w-full h-[10vh] bg-slate-400">
 
                 <div className="flex items-center gap-3 justify-center h-full ">
-                    <h1 className='text-white'>NOBITEX</h1>
                     <AiOutlineMenu onClick={clickHandller} className='text-white w-5 h-5' />
+                    <h1 className='text-white'>NOBITEX</h1>
                 </div>
                 <div className="flex items-center gap-7 justify-center h-full">
                     <BsFillPersonFill className='w-5 h-5 text-yellow-200' />
