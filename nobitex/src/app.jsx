@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useRoutes } from "react-router-dom";
-import setLocalStorage, { chengeValue, getValue } from "./hooks/setLocalStorage";
+import useLocalStorage, { chengeValue, getValue } from "./hooks/setLocalStorage";
 import Header from "./layout/header";
 import HeaderMenuy from "./layout/headermenu";
 import routes from "./router";
@@ -8,7 +8,7 @@ import routes from "./router";
 const App = () => {
 
     let theme = useRef()
-    setLocalStorage()
+    useLocalStorage()
     let routers = useRoutes(routes)
 
    useEffect(()=>{

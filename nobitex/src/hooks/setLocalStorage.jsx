@@ -1,4 +1,4 @@
-const setLocalStorage = () => {
+const useLocalStorage = () => {
     if (JSON.parse(localStorage.getItem("firstTime"))) {
         localStorage.setItem("agreement:money-laundering-alert", JSON.stringify(true))
         localStorage.setItem("firstTime", JSON.stringify(false))
@@ -13,4 +13,4 @@ let getValue = (key) => {
     return JSON.parse(localStorage.getItem(key))
 }
 export { getValue,chengeValue }
-export default setLocalStorage;
+export default useLocalStorage;

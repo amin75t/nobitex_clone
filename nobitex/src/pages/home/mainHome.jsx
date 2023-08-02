@@ -25,7 +25,7 @@ const MainHome = () => {
                 </div> : undefined}
                 <div className="bg-header w-full flex-col flex items-center gap-5 pt-2 ">
                     {criptos.map((cripto)=>{
-                        return <CardCripto name={cripto.name} bg={cripto.color}/>
+                        return <CardCripto name={cripto.name} bg={cripto.color} state={cripto.state}/>
                     })}
                     
                 </div>
