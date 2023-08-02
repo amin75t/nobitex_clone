@@ -26,8 +26,9 @@ const App = () => {
             chengeValue("theme","dark")
         }
     }
+  
     return (
-        <div ref={theme} class="">
+        <div ref={theme}  class="">
             <div className="dark:bg-[#2F353A] bg-white min-h-screen">
                 <Header />
 

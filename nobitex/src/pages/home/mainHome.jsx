@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { chengeValue, getValue } from "../../hooks/setLocalStorage";
 import CardCripto from '../../components/cardCripto'
+import criptos from "../../data/cripto";
 const MainHome = () => {
     let [show, setShow] = useState(getValue("agreement:money-laundering-alert"))
 
@@ -9,7 +10,7 @@ const MainHome = () => {
         setShow(false)
     }
     return (
-        <div className="flex flex-col items-center justify-center gap-4 mt-5 ">
+        <div className="flex flex-col h-auto items-center justify-center gap-4 mt-5 ">
             <div className="flex items-center justify-end w-full px-4">
                 <button className="w-fit py-1 px-5 rounded text-white border border-yellow-400">درجه بندی</button>
             </div>
@@ -22,8 +23,11 @@ const MainHome = () => {
                     </p>
                     <button onClick={clickHandller} className="w-fit py-1 px-5 rounded text-white mt-4 bg-red-500">خواندم</button>
                 </div> : undefined}
-                <div>
-                    <CardCripto/>
+                <div className="bg-header w-full flex-col flex items-center gap-5 pt-2 ">
+                    {criptos.map((cripto)=>{
+                        return <CardCripto name={cripto.name} bg={cripto.color}/>
+                    })}
+                    
                 </div>
         </div>);
 }
