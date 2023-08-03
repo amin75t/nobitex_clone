@@ -2,6 +2,8 @@ import { useState } from "react";
 import { chengeValue, getValue } from "../../hooks/setLocalStorage";
 import CardCripto from '../../components/cardCripto'
 import criptos from "../../data/cripto";
+import Vault from "./vault";
+import ShowStateProfile from "./showStateProfile";
 const MainHome = () => {
     let [show, setShow] = useState(getValue("agreement:money-laundering-alert"))
 
@@ -27,8 +29,11 @@ const MainHome = () => {
                     {criptos.map((cripto)=>{
                         return <CardCripto name={cripto.name} bg={cripto.color} state={cripto.state}/>
                     })}
-                    
+                    <Vault/>
+                    <ShowStateProfile/>
                 </div>
+               
+                
         </div>);
 }
 
