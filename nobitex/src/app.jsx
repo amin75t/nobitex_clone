@@ -4,6 +4,7 @@ import useLocalStorage, { chengeValue, getValue } from "./hooks/setLocalStorage"
 import Header from "./layout/header";
 import HeaderMenuy from "./layout/headermenu";
 import routes from "./router";
+import Footer from "./layout/footer";
 
 const App = () => {
 
@@ -32,8 +33,11 @@ const App = () => {
             <div className="dark:bg-[#2F353A] bg-white min-h-screen">
                 <Header />
 
+                <div className="">
                 {routers}
+                </div>
                 <div onClick={themeToggleHandller} className="w-12 h-12 rounded-full bg-white fixed left-4 bottom-4"></div>
+                <Footer/>
             </div>
         </div>
     );

@@ -4,6 +4,7 @@ import CardCripto from '../../components/cardCripto'
 import criptos from "../../data/cripto";
 import Vault from "./vault";
 import ShowStateProfile from "./showStateProfile";
+import OpenOrders from "./openOrders";
 const MainHome = () => {
     let [show, setShow] = useState(getValue("agreement:money-laundering-alert"))
 
@@ -31,6 +32,7 @@ const MainHome = () => {
                     })}
                     <Vault/>
                     <ShowStateProfile/>
+                    <OpenOrders/>
                 </div>
                
                 
